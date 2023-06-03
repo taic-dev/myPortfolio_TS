@@ -7,7 +7,7 @@ interface Headline1Props {
 
 export const Headline1 = ({ name, subName }: Headline1Props) => {
   return (
-    <div className='headline'>
+    <div className='headline1'>
       <h2 className='text-4xl'>{name}</h2>
       <span className='text-sm'>{subName}</span>
     </div>
