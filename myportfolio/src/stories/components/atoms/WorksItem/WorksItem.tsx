@@ -22,9 +22,9 @@ export const WorksItem = ({
       <a href={link}>
         <img src={imgUrl} alt="実績画像" className='w-[100%] shadow-md mb-[20px] rounded-xl' />
         <div className='leading-none'>
-          <h4 className='text-lg mb-[10px]'>{name.length > 25 ? `${name.slice(0,25)}...` : name }</h4>
-          <p className='text-sm mb-[10px]'>{desc}</p>
-          <span className='text-xs'>{year} / {client}</span>
+          <h4 className='text-lg mb-[10px] font-bold noto-sans-japanese'>{name.length > 25 ? `${name.slice(0,25)}...` : name }</h4>
+          <p className='text-sm mb-[10px] noto-sans-japanese'>{desc}</p>
+          <span className='text-xs noto-sans-japanese'>{year} / {client}</span>
         </div>
       </a>
     </li>
