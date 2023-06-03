@@ -1,13 +1,13 @@
-import React from "react";
-import { SidebarItem } from "../../atoms/SidebarItem/SidebarItem";
+import React, { ReactNode } from "react";
 
-export const SidebarList = () => {
+interface SidebarListProps {
+  children: ReactNode
+}
+
+export const SidebarList = ({ children }: SidebarListProps) => {
   return (
     <ol type="1">
-      <SidebarItem link="#about" text="About" />
-      <SidebarItem link="#skill" text="Skill" />
-      <SidebarItem link="#works" text="Works" />
-      <SidebarItem link="#contact" text="Contact" />
+      { children }
     </ol>
   );
 };
