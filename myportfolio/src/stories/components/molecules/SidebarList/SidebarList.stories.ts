@@ -10,5 +10,4 @@ const meta: Meta<typeof SidebarList> = {
 export default meta;
 type Story = StoryObj<typeof SidebarList>
 
-export const Index: Story = {
-}
+export const Index: Story = {}
