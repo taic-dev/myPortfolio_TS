@@ -14,3 +14,7 @@ ol {
 ol li {
   list-style: auto;
 }
+
+.noto-sans-japanese {
+  font-family: Noto Sans JP,sans-serif;
+}
