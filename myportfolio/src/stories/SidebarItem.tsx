@@ -6,6 +6,6 @@ interface SidebarItemProps {
 
 export const SidebarItem = ({ text }: SidebarItemProps) => {
   return (
-    <a href="#">{ text }</a>
+    <a href="#" className='text-3xl'>{ text }</a>
   )
 }
