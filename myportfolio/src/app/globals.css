@@ -6,3 +6,15 @@
 html,body {
   font-family: 'Secular One', sans-serif;
 }
+
+ol {
+  list-style: auto;
+}
+
+ol li {
+  list-style: auto;
+}
+
+.noto-sans-japanese {
+  font-family: Noto Sans JP,sans-serif;
+}
