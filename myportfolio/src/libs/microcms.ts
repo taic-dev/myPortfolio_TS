@@ -22,3 +22,8 @@ export const getSkills = async () => {
   const data = await client.get({ endpoint: "skills" });
   return data;
 }
+
+export const getWorks = async () => {
+  const data = await client.get({ endpoint: "works" });
+  return data;
+}
