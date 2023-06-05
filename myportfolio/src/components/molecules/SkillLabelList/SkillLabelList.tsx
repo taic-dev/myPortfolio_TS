@@ -14,8 +14,6 @@ interface SkillsType {
 }
 
 export const SkillLabelList = ({ skillLists }: any ) => {
-  console.log(skillLists)
-
   return (
     <ul className="flex flex-wrap gap-2.5">
       {skillLists.contents.map((v: SkillsType)=>(
