@@ -1,11 +1,31 @@
 import React from "react";
 import { WorksItem } from "../../atoms/WorksItem/WorksItem";
+import type { MicroCMSImage } from "microcms-js-sdk";
 
-export const WorksList = ({ worksLists }) => {
+interface WorksType {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+  name: string;
+  desc: string;
+  date: number;
+  client: string;
+  thumbnail: MicroCMSImage;
+  web_url?: string;
+  github_url?: string;
+  frontend?: [];
+  backend?: [];
+  other?: [];
+}
+
+export const WorksList = ({ worksLists }: any) => {
   const { contents } = worksLists;
+  console.log(contents);
   return (
     <ul className="flex gap-5">
-      {contents.map((v)=>(
+      {contents.map((v: WorksType)=>(
         <WorksItem
           key={v.id}
           link=""
