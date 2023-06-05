@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { SkillLabelItem } from "../../atoms/SkillLabelItem/SkillLabelItem";
 
 export const SkillLabelList = () => {
