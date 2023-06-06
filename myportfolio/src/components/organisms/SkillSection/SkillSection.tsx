@@ -7,7 +7,6 @@ export function SkillSection({ children }: { children: ReactNode}) {
     <section className='mb-[50px]'>
       <Headline1 name="Skill" subName="スキルセット" />
       <div className="ml-[50px]">
-        <Headline2 name="Development language" />
         { children }
       </div>
     </section>
