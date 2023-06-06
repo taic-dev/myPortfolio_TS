@@ -6,7 +6,7 @@ interface Headline2Props {
 
 export const Headline2 = ({ name }: Headline2Props) => {
   return(
-    <div className="headline2">
+    <div className="headline2 mb-4">
       <h3 className="
         relative
         text-3xl

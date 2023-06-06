@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sidebar } from '@/components/templates/Sidebar';
 import { FvSection } from '@/components/organisms/FvSection/FvSection';
+import { AboutSection } from '@/components/organisms/AboutSection/AboutSection';
 import { SkillLabelList } from '@/components/molecules/SkillLabelList/SkillLabelList'
 import { WorksList } from '@/components/molecules/WorksList/WorksList';
 import { getSkills, getWorks } from "@/libs/microcms";
@@ -14,6 +15,7 @@ export default async function Home() {
       <div className='max-w-[calc(95%_-_250px)] w-[100%] m-0 ml-auto'>
         <main>
           <FvSection />
+          <AboutSection />
           <SkillLabelList skillLists={skillLists} />
           <WorksList worksLists={worksLists} />
         </main>
