@@ -13,7 +13,7 @@ export const Sidebar = () => {
           iconUrl='https://myportfoliomaind3f2.gatsbyjs.io/static/me-f026bf3459d66dc11942c02ddf5dd9d8.png'
           position='auto'
          />
-        <nav className='mt-[50px] ml-[100px]'>
+        <nav className='mt-[50px] ml-[80px]'>
           <SidebarList>
             <SidebarItem link="#about" text="About" />
             <SidebarItem link="#skill" text="Skill" />
