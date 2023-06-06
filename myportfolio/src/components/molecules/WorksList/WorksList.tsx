@@ -24,7 +24,7 @@ export const WorksList = ({ worksLists }: any) => {
   const { contents } = worksLists;
   console.log(contents);
   return (
-    <ul className="flex gap-5">
+    <ul className="flex gap-5 overflow-x-scroll pb-5">
       {contents.map((v: WorksType)=>(
         <WorksItem
           key={v.id}

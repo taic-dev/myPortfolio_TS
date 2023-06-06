@@ -6,8 +6,8 @@ interface Headline3Props {
 
 export const Headline3 = ({ name }: Headline3Props) => {
   return(
-    <div className="headline3">
-      <h4 className="text-base w-fit border-b-2 border-black leading-none">-{ name }</h4>
+    <div className="headline3 my-8">
+      <h4 className="text-2xl w-fit">{ name }</h4>
     </div>
   )
 }

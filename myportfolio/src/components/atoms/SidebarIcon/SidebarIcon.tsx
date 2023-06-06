@@ -10,7 +10,7 @@ export const SidebarIcon = ({ link, iconUrl, position }: SidebarIconPops) => {
   return (
     <div>
       <a href={link}>
-        <img src={iconUrl} alt="アイコン画像" className={`w-48 h-48 object-cover rounded-[20%] m-${position}`} />
+        <img src={iconUrl} alt="アイコン画像" className={`w-[200px] h-[200px] object-cover rounded-[20%] m-${position}`} />
       </a>
     </div>
   )

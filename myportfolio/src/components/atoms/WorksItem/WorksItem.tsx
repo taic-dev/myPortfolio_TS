@@ -19,7 +19,7 @@ export const WorksItem = ({
   year
 }: WorksItemProps) => {
   return (
-    <li className='w-[314px]'>
+    <li className='w-[314px] shrink-0'>
       <a href={link}>
         <Image src={imgUrl} alt="実績画像" width={1980} height={1150} className='w-[100%] shadow-md mb-[20px] rounded-xl' />
         <div className='leading-none'>
