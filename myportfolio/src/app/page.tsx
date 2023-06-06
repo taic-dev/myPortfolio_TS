@@ -1,15 +1,17 @@
 import React from 'react';
 import Image from 'next/image'
+import { getSkills, getWorks } from "@/libs/microcms";
 import { Sidebar } from '@/components/templates/Sidebar';
 import { FvSection } from '@/components/organisms/FvSection/FvSection';
 import { AboutSection } from '@/components/organisms/AboutSection/AboutSection';
 import { SkillSection } from '@/components/organisms/SkillSection/SkillSection';
+import { WorksSection } from '@/components/organisms/WorksSection/WorksSection';
 import { SkillLabelList } from '@/components/molecules/SkillLabelList/SkillLabelList'
 import { WorksList } from '@/components/molecules/WorksList/WorksList';
-import { getSkills, getWorks } from "@/libs/microcms";
 import { Headline3 } from '@/components/atoms/Headline3/Headline3';
 import { Headline4 } from '@/components/atoms/Headline4/Headline4';
 import { Headline2 } from '@/components/atoms/Headline2/Headline2';
+import { Button } from '@/components/atoms/Button/Button';
 
 export default async function Home() {
   const skillLists = await getSkills();
@@ -66,7 +68,13 @@ export default async function Home() {
               </a>
             </div>
           </SkillSection>
-          <WorksList worksLists={worksLists} />
+          <WorksSection>
+            <div className="mb-10">
+              <Headline2 name="Pick Up" />
+              <WorksList worksLists={worksLists} />
+            </div>
+            <Button name="制作物一覧へ" link="" />
+          </WorksSection>
         </main>
       </div>
     </div>
