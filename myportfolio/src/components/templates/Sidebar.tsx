@@ -6,7 +6,7 @@ import { SidebarItem } from "../atoms/SidebarItem/SidebarItem";
 
 export const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <div className="fixed max-w-[250px] top-[100px] ml-[15px]">
       <SidebarWrapper>
         <SidebarIcon
           link="/"

@@ -8,12 +8,14 @@ export default async function Home() {
   const skillLists = await getSkills();
   const worksLists = await getWorks();
   return (
-    <div className="wrapper">
+    <div className="max-w-[1200px] m-auto flex pt-[150px]">
       <Sidebar />
-      <main>
-        <SkillLabelList skillLists={skillLists} />
-        <WorksList worksLists={worksLists} />
-      </main>
+      <div className='max-w-[calc(95%_-_250px)] w-[100%] m-0 ml-auto'>
+        <main>
+          <SkillLabelList skillLists={skillLists} />
+          <WorksList worksLists={worksLists} />
+        </main>
+      </div>
     </div>
   )
 }
