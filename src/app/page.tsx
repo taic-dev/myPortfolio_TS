@@ -57,11 +57,11 @@ export default async function Home() {
             <div className='mb-10'>
               <Headline2 name="Development language" />
               <Headline3 name="Front end" />
-              <SkillLabelList skillLists={skillLists} />
+              <SkillLabelList skillLists={skillLists} skillType="frontend" />
               <Headline3 name="Back end" />
-              <SkillLabelList skillLists={skillLists} />
+              <SkillLabelList skillLists={skillLists} skillType="backend" />
               <Headline3 name="Other" />
-              <SkillLabelList skillLists={skillLists} />
+              <SkillLabelList skillLists={skillLists} skillType="other" />
             </div>
             <div className='mb-8'>
               <Headline2 name="Github contributions" />
