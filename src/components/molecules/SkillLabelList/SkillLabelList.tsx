@@ -11,14 +11,16 @@ interface SkillsType {
   name: string;
   level: number;
   iconUrl: MicroCMSImage;
+  type: string[]
 }
 
-export const SkillLabelList = ({ skillLists }: any ) => {
+export const SkillLabelList = ({ skillLists, skillType }: any ) => {
   const { contents } = skillLists;
+  console.log(contents);
   return (
     <ul className="flex flex-wrap gap-2.5">
       {contents.map((v: SkillsType)=>(
-        <SkillLabelItem
+        v.type[0] === skillType && <SkillLabelItem
           key={v.id}
           name={v.name}
           level={v.level}
