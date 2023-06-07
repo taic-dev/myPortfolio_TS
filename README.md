@@ -5,7 +5,7 @@
 ## StoryBook
 https://64804919461b05f67b15fc95-ddjumuevwq.chromatic.com/
 
-<img width="403" alt="スクリーンショット 2023-05-15 20 22 36" src="https://github.com/taic-dev/myPortfolio_TS/assets/52269577/ebff96dc-06ab-48e7-aa2e-a17f62036912">
+<img width="100%" alt="スクリーンショット 2023-05-15 20 22 36" src="https://github.com/taic-dev/myPortfolio_TS/assets/52269577/ebff96dc-06ab-48e7-aa2e-a17f62036912">
 
 ## Description
 Taic-devのポートフォリオサイト。<br>
