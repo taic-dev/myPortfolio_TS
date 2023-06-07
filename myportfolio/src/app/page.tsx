@@ -24,6 +24,7 @@ export default async function Home() {
         <main>
           <FvSection />
           <AboutSection>
+            <Headline2 name="Profile" />
             <div className="flex items-center">
               <Headline4 name="Name" />
               <p>Taishi Ohmoto（大本 泰史）</p>
