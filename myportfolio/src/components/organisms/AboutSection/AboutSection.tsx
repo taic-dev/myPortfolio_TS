@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import { Headline1 } from '@/components/atoms/Headline1/Headline1'
 
-export function AboutSection({ children }: { children: ReactNode }) {
+export const AboutSection = (({ children }: { children: ReactNode })=>{
   return (
     <section className='mb-[50px]'>
       <Headline1 name="About" subName="私について" />
@@ -10,4 +10,4 @@ export function AboutSection({ children }: { children: ReactNode }) {
       </div>
     </section>
   )
-}
+})

@@ -1,7 +1,7 @@
 import React, { ReactNode, ReactPortal } from 'react'
 import { Headline1 } from '@/components/atoms/Headline1/Headline1'
 
-export function SkillSection({ children }: { children: ReactNode}) {
+export const SkillSection = ({ children }: { children: ReactNode}) => {
   return (
     <section className='mb-[50px]'>
       <Headline1 name="Skill" subName="スキルセット" />
