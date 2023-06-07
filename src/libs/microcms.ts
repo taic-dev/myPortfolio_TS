@@ -18,8 +18,15 @@ export const client = createClient({
   apiKey: process.env.MICROCMS_API_KEY || "",
 });
  
-export const getSkills = async () => {
-  const data = await client.get({ endpoint: "skills" });
+export const getSkills = async (limit=100, offset=0) => {
+  const data = await client.get({ 
+    endpoint: "skills",
+    queries: {
+      offset,
+      limit
+    }
+  });
+
   return data;
 }
 
