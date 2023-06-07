@@ -8,12 +8,14 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_6896902460ff6a6"
   },
   "dependencies": {
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
+    "chromatic": "^6.18.0",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "microcms-js-sdk": "^2.5.0",
@@ -36,5 +38,7 @@
     "postcss": "^8.4.24",
     "storybook": "^7.0.18",
     "tailwindcss": "^3.3.2"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "ts-myportfolio@0.1.0"
 }
