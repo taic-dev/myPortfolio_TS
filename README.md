@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+<img width="403" alt="スクリーンショット 2023-05-15 20 22 36" src="https://github.com/taic-dev/myPortfolio_TS/assets/52269577/ebff96dc-06ab-48e7-aa2e-a17f62036912">
+</p>
 
-## Getting Started
+# ポートフォリオサイト〜
+## WEB
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## StoryBook
+https://64804919461b05f67b15fc95-ddjumuevwq.chromatic.com/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<img width="1440" alt="スクリーンショット 2023-05-15 20 26 39" src="https://github.com/taic-dev/PokeQuiz/assets/52269577/8c5e21f3-614c-4686-8be6-467ae1803d7b">
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Description
+Taic-devのポートフォリオサイト。<br>
+エンジニアであれば誰しもが1度は目を通したことがある公式ドキュメント。<br>
+公式ドキュメントを参考にシンプルなデザインでコンテンツを見やすく、わかりやすくまとめることを意識して制作しました。<br>
+また、爆速でコンテンツが表示されるように、サイトの構築にはGatsbyを使用しユーザーにストレスを与えないサイトを目指しました。
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Requirement
+- typescript v5.1.3
+- node.js v18.14.6
+- react v18.2.8
+- next v13.4.4,
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author
+taic-dev
