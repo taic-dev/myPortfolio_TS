@@ -8,7 +8,17 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    screens: {
+      xs: {'max': '450px'},
+      sm: {'max': '600px'},
+      md: {'max': '700px'},
+      lg: {'max': '900px'}
+    },
+    extend: {
+      fontSize: {
+        topTitle: "clamp(45px,7.7vw,59px)"
+      }
+    },
   },
   plugins: [],
 };
