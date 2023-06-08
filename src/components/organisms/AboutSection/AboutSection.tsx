@@ -5,7 +5,7 @@ export const AboutSection = (({ children }: { children: ReactNode })=>{
   return (
     <section className='mb-[50px]'>
       <Headline1 name="About" subName="私について" />
-      <div className="ml-[50px]">
+      <div className="ml-[50px] xs:ml-[15px]">
         { children }
       </div>
     </section>

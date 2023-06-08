@@ -9,11 +9,16 @@ module.exports = {
   ],
   theme: {
     screens: {
+      xs: {'max': '450px'},
       sm: {'max': '600px'},
       md: {'max': '700px'},
       lg: {'max': '900px'}
     },
-    extend: {},
+    extend: {
+      fontSize: {
+        topTitle: "clamp(45px,7.7vw,59px)"
+      }
+    },
   },
   plugins: [],
 };

@@ -8,7 +8,7 @@ interface SidebarIconPops {
 
 export const SidebarIcon = ({ link, iconUrl, position }: SidebarIconPops) => {
   return (
-    <div>
+    <div className='w-[200px] h-[200px]'>
       <a href={link}>
         <img src={iconUrl} alt="アイコン画像" className={`w-[200px] h-[200px] object-cover rounded-[20%] m-${position}`} />
       </a>

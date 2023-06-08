@@ -18,32 +18,32 @@ export default async function Home() {
   const skillLists = await getSkills();
   const worksLists = await getWorks();
   return (
-    <div className="max-w-[1200px] m-auto flex pt-[150px]">
+    <div className="max-w-[1200px] m-auto flex pt-[150px] lg:pt-[50px]">
       <Sidebar />
-      <div className='max-w-[calc(95%_-_250px)] w-[100%] m-0 ml-auto'>
+      <div className='max-w-[calc(95%_-_250px)] w-[100%] m-0 ml-auto lg:max-w-[100%] lg:w-[100%]'>
         <main>
           <FvSection />
           <AboutSection>
             <Headline2 name="Profile" />
-            <div className="flex items-center">
+            <div className="flex items-center xs:flex-col xs:items-start">
               <Headline4 name="Name" />
-              <p>Taishi Ohmoto（大本 泰史）</p>
+              <p className='xs:ml-[30px]'>Taishi Ohmoto（大本 泰史）</p>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center xs:flex-col xs:items-start">
               <Headline4 name="Date of birth" />
-              <p>1998.5.30</p>
+              <p className='xs:ml-[30px]'>1998.5.30</p>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center xs:flex-col xs:items-start">
               <Headline4 name="Birthplace" />
-              <p>Japan / Hiroshima</p>
+              <p className='xs:ml-[30px]'>Japan / Hiroshima</p>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center xs:flex-col xs:items-start">
               <Headline4 name="Hobby" />
-              <p>Fashion,Sauna</p>
+              <p className='xs:ml-[30px]'>Fashion,Sauna</p>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center xs:flex-col xs:items-start">
               <Headline4 name="SNS" />
-              <div className='flex items-center gap-5'>
+              <div className='flex items-center gap-5 xs:ml-[30px]'>
                 <a href="https://github.com/taic-dev">
                   <Image src="/github.svg" width={40} height={40} alt="Githubロゴ" className='h-auto' />
                 </a>
@@ -65,8 +65,8 @@ export default async function Home() {
             </div>
             <div className='mb-8'>
               <Headline2 name="Github contributions" />
-              <a href="https://github.com/taic-dev">
-                <img src="https://github-contributions-api.deno.dev/taic-dev.svg" alt="Github contributions" />
+              <a href="https://github.com/taic-dev" className='block overflow-x-scroll'>
+                <img src="https://github-contributions-api.deno.dev/taic-dev.svg" alt="Github contributions" className='max-w-none' />
               </a>
             </div>
           </SkillSection>
