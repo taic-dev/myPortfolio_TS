@@ -30,8 +30,8 @@ export default async function worksDetail({ params }: {params : {slug: string}})
   const {id, name, desc, date, client, thumbnail:{ url }} = worksList[0]
 
   return (
-    <div>
-      詳細ページです
+    <main>
+      
       <Image src={url} alt="制作物の画像" width={1980} height={1150} className='w-[100%] shadow-md mb-[20px] rounded-xl'/>
       id番号:{id}<br />
       名前:{name}<br />
@@ -39,6 +39,6 @@ export default async function worksDetail({ params }: {params : {slug: string}})
       年:{date}<br />
       クライアント:{client} <br />
 
-    </div>
+    </main>
   )
 }

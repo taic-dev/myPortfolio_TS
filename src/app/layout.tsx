@@ -23,7 +23,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Secular+One&display=swap" rel="stylesheet" />
       </head>
       <body>
-      <div className="max-w-[1200px] m-auto flex pt-[150px] lg:pt-[50px]">
+      <div className="max-w-[1200px] m-auto flex pt-[100px] lg:pt-[50px]">
       <Sidebar />
       <div className='max-w-[calc(95%_-_250px)] w-[100%] m-0 ml-auto lg:max-w-[100%] lg:w-[100%]'>
         {children}
