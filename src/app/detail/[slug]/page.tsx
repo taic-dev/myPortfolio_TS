@@ -2,6 +2,7 @@ import React from "react"
 import Image from 'next/image';
 import { getWorks } from "@/libs/microcms";
 import { IconButton } from "@/components/atoms/IconButton/IconButton";
+import { Button } from "@/components/atoms/Button/Button";
 import type { MicroCMSImage } from "microcms-js-sdk";
 
 interface WorksType {
@@ -47,8 +48,12 @@ export default async function worksDetail({ params }: {params : {slug: string}})
           <li>{v}</li>
         ))}
       </ul>
-      <div className="noto-sans-japanese">
+      <div className="noto-sans-japanese mb-12">
         <p className="leading-loose">{desc}</p>
+      </div>
+      <div className="flex justify-center items-center gap-[20px] sm:flex-col">
+        <Button name="制作物一覧へ" link="/archive" />
+        <Button name="TOPへ戻る" link="/" />
       </div>
     </main>
   )

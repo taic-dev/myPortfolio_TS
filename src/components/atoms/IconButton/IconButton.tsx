@@ -9,9 +9,9 @@ interface IconButtonProps {
 
 export const IconButton = ({ name, iconUrl, link }: IconButtonProps) => {
   return (
-    <a href={link} className="flex items-center gap-[5px] px-[15px] py-[10px] shadow-[1px_1px_6px_#ccc;] rounded-xl">
+    <a href={link} className="w-[120px] flex items-center justify-center gap-[8px] py-[10px] shadow-[1px_1px_6px_#ccc;] rounded-xl">
       <Image src={`/${iconUrl}.svg`} alt="アイコン画像" width={20} height={20} />
-      <span className="noto-sans-japanese">{name}</span>
+      <span className="noto-sans-japanese text-sm">{name}</span>
     </a>
   )
 }
