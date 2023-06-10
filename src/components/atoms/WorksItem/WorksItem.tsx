@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 import Image from 'next/image';
 
 interface WorksItemProps {
@@ -20,14 +21,14 @@ export const WorksItem = ({
 }: WorksItemProps) => {
   return (
     <li className='w-[314px] shrink-0'>
-      <a href={link}>
+      <Link href={`detail/${link}`}>
         <Image src={imgUrl} alt="実績画像" width={1980} height={1150} className='w-[100%] shadow-md mb-[20px] rounded-xl' />
         <div className='leading-none'>
           <h4 className='text-lg mb-[10px] font-bold noto-sans-japanese'>{name.length > 25 ? `${name.slice(0,25)}...` : name }</h4>
           <p className='text-sm mb-[10px] noto-sans-japanese'>{desc.length >= 40 ? `${desc.slice(0,40)}...` : desc }</p>
           <span className='text-xs noto-sans-japanese'>{year} / {client}</span>
         </div>
-      </a>
+      </Link>
     </li>
   )
 }

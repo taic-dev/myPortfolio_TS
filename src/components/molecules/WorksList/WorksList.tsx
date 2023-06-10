@@ -27,7 +27,7 @@ export const WorksList = ({ worksLists }: any) => {
       {contents.map((v: WorksType)=>(
         <WorksItem
           key={v.id}
-          link=""
+          link={v.id}
           imgUrl={v.thumbnail.url}
           name={v.name}
           desc={v.desc}
