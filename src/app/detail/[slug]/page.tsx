@@ -46,7 +46,7 @@ export default async function worksDetail({ params }: {params : {slug: string}})
       <ul className="flex flex-wrap items-center gap-[20px] mb-7">
         {langList.map((v)=>(
           <li key={v}>
-            <Image src={`/lang/${v}.svg`} alt="スキル_画像" width={30} height={30} />
+            <Image src={`/lang/${v.toLowerCase()}.svg`} alt="スキル_画像" width={30} height={30} />
           </li>
         ))}
       </ul>
