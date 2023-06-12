@@ -9,6 +9,7 @@ interface WorksItemProps {
   desc: string;
   client: string;
   year: number;
+  wv: string;
 }
 
 export const WorksItem = ({
@@ -17,12 +18,13 @@ export const WorksItem = ({
   name,
   desc,
   client,
-  year
+  year,
+  wv
 }: WorksItemProps) => {
   return (
-    <li className='w-[314px] shrink-0'>
+    <li className={`w-[${wv}] shrink-0`}>
       <Link href={`detail/${link}`}>
-        <Image src={imgUrl} alt="実績画像" width={1980} height={1150} className='w-[100%] shadow-md mb-[20px] rounded-xl' />
+        <Image src={imgUrl} alt="実績画像" width={1980} height={1150} className='w-[100%] mb-[20px] rounded-xl shadow-[1px_1px_6px_#ccc;]' />
         <div className='leading-none'>
           <h4 className='text-lg mb-[10px] font-bold noto-sans-japanese'>{name.length > 25 ? `${name.slice(0,25)}...` : name }</h4>
           <p className='text-sm mb-[10px] noto-sans-japanese'>{desc.length >= 40 ? `${desc.slice(0,40)}...` : desc }</p>

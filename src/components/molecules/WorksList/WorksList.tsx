@@ -22,8 +22,9 @@ interface WorksType {
 
 export const WorksList = ({ worksLists }: any) => {
   const { contents } = worksLists;
+  contents.reverse();
   return (
-    <ul className="flex gap-5 overflow-x-scroll pb-5">
+    <ul className="flex gap-5 overflow-x-scroll p-3">
       {contents.map((v: WorksType)=>(
         <WorksItem
           key={v.id}
@@ -33,6 +34,7 @@ export const WorksList = ({ worksLists }: any) => {
           desc={v.desc}
           client={v.client}
           year={v.date}
+          wv="314px"
         />
       ))}
     </ul>

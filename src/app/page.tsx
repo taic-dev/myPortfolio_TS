@@ -71,7 +71,7 @@ export default async function Home() {
           <Headline2 name="Pick Up" />
           <WorksList worksLists={worksLists} />
         </div>
-        <Button name="制作物一覧へ" link="" />
+        <Button name="制作物一覧へ" link="/archive" />
       </WorksSection>
       <ContactSection>
         <form action="">
