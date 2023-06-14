@@ -9,10 +9,11 @@ module.exports = {
   ],
   theme: {
     screens: {
-      xs: {'max': '450px'},
-      sm: {'max': '600px'},
+      xl: {'max': '1200px'},
+      lg: {'max': '900px'},
       md: {'max': '700px'},
-      lg: {'max': '900px'}
+      sm: {'max': '600px'},
+      xs: {'max': '450px'},
     },
     extend: {
       fontSize: {
