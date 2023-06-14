@@ -1,8 +1,9 @@
 import React from "react";
 import { getWorks } from "@/libs/microcms";
 import { WorksItem } from "@/components/atoms/WorksItem/WorksItem";
-import type { MicroCMSImage } from "microcms-js-sdk";
 import { Headline1 } from "@/components/atoms/Headline1/Headline1";
+import { Button } from "@/components/atoms/Button/Button";
+import type { MicroCMSImage } from "microcms-js-sdk";
 
 interface WorksType {
   id: string;
@@ -27,9 +28,9 @@ export default async function Archive() {
   const { contents } = worksLists;
   contents.reverse();
   return (
-    <main className="mb-[50px] mx-[15px]">
+    <main className="mb-[50px]">
       <Headline1 name="Works" subName="制作物" />
-      <ul className="flex flex-wrap gap-[30px]">
+      <ul className="flex flex-wrap gap-[30px] mb-[50px] lg:mx-[15px]">
         {contents.map((v: WorksType)=>(
           <WorksItem
             key={v.id}
@@ -43,6 +44,9 @@ export default async function Archive() {
           />
         ))}
       </ul>
+      <div className="flex justify-center items-center gap-[20px] sm:flex-col">
+        <Button name="TOPへ戻る" link="/" />
+      </div>
     </main>
   )
 }
