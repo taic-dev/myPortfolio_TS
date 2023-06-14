@@ -24,7 +24,7 @@ export const WorksList = ({ worksLists }: any) => {
   const { contents } = worksLists;
   contents.reverse();
   return (
-    <ul className="flex gap-5 overflow-x-scroll p-3">
+    <ul className="flex gap-5 overflow-x-scroll p-3 translate-x-[-0.75rem]">
       {contents.map((v: WorksType)=>(
         <WorksItem
           key={v.id}
