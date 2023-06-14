@@ -34,7 +34,7 @@ export const WorksList = ({ worksLists }: any) => {
           desc={v.desc}
           client={v.client}
           year={v.date}
-          wv="314px"
+          wv="w-[314px]"
         />
       ))}
     </ul>

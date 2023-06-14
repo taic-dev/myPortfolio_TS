@@ -22,7 +22,7 @@ export const WorksItem = ({
   wv
 }: WorksItemProps) => {
   return (
-    <li className={`w-[${wv}] shrink-0`}>
+    <li className={`${wv} shrink-0`}>
       <Link href={`detail/${link}`}>
         <Image src={imgUrl} alt="実績画像" width={1980} height={1150} className='w-[100%] mb-[20px] rounded-xl shadow-[1px_1px_6px_#ccc;]' />
         <div className='leading-none'>

@@ -37,7 +37,7 @@ export default async function Archive() {
             desc={v.desc}
             client={v.client}
             year={v.date}
-            wv="calc(33.33333%_-_20px)"
+            wv="w-[calc(33.33333%_-_20px)]"
           />
         ))}
       </ul>
