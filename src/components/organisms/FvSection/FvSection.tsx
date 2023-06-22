@@ -1,5 +1,8 @@
+"use client"
+
 import React from "react";
 import { SidebarIcon } from "@/components/atoms/SidebarIcon/SidebarIcon";
+import { motion } from "framer-motion";
 
 export const FvSection = () => {
   return (
@@ -8,10 +11,60 @@ export const FvSection = () => {
         <div className="hidden lg:block">
           <SidebarIcon link="/" iconUrl="https://myportfoliomaind3f2.gatsbyjs.io/static/me-f026bf3459d66dc11942c02ddf5dd9d8.png" position="" />
         </div>
-        <h1 className="mb-[80px] text-[59px] font-bold leading-none lg:mb-0 md:text-topTitle sm:text-center">Hello World !!<br/>My name is Taic-dev</h1>
+        <h1 className="mb-[80px] text-[59px] font-bold leading-none lg:mb-0 md:text-topTitle sm:text-center">
+          <span className="block overflow-hidden py-[5px]">
+            <motion.span
+              className="block"
+              initial={{ 
+                y: 100,
+              }}
+              animate={{ 
+                y: [100,-5,0],
+              }}
+              transition={{ 
+                delay: 1,
+                duration: 1 
+              }}
+            >
+              Hello World !!
+            </motion.span>
+          </span>
+          <span className="block overflow-hidden py-[5px]">
+            <motion.span
+              className="block"
+              initial={{ 
+                y: 100,
+              }}
+              animate={{ 
+                y: [100,-5,0],
+              }}
+              transition={{ 
+                delay: 1,
+                duration: 1 
+              }}
+            >
+            My name is Taic-dev
+            </motion.span>
+          </span>
+        </h1>
       </div>
-      <p className="leading-loose noto-sans-japanese font-bold">Web開発者。HP制作、WEBアプリ開発、業務効率化ツール制作と幅広く手がけています。 中でもフロントエンド開発が大好きで、ユーザーがストレスなく使えるサービスを目指して日々開発に取り組んでいます。<br />
-        また、<strong className="underline">「自分が死んだ後も使われるようなサービスを作ること」</strong>を人生の目標にしています。</p>
+      <motion.div 
+        initial={{ 
+          opacity: 0,
+          y: 10,
+        }}
+        animate={{ 
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{ 
+          delay: 1,
+          duration: 1.5 
+        }}
+      >
+        <p className="leading-loose noto-sans-japanese font-bold">Web開発者。HP制作、WEBアプリ開発、業務効率化ツール制作と幅広く手がけています。 中でもフロントエンド開発が大好きで、ユーザーがストレスなく使えるサービスを目指して日々開発に取り組んでいます。<br />
+          また、<strong className="underline">「自分が死んだ後も使われるようなサービスを作ること」</strong>を人生の目標にしています。</p>
+      </motion.div>
     </section>
   )
 }
