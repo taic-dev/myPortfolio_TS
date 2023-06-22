@@ -11,8 +11,8 @@ export const FvSection = () => {
         <div className="hidden lg:block">
           <SidebarIcon link="/" iconUrl="https://myportfoliomaind3f2.gatsbyjs.io/static/me-f026bf3459d66dc11942c02ddf5dd9d8.png" position="" />
         </div>
-        <h1 className="mb-[80px] text-[59px] font-bold leading-none lg:mb-0 md:text-topTitle sm:text-center">
-          <span className="block overflow-hidden py-[5px]">
+        <h1 className="mb-[80px] text-[59px] font-bold leading-none lg:mb-0 md:text-topTitle sm:text-center translate-y-[-5px]">
+          <span className="block overflow-hidden pt-[5px]">
             <motion.span
               className="block"
               initial={{ 
@@ -29,7 +29,7 @@ export const FvSection = () => {
               Hello World !!
             </motion.span>
           </span>
-          <span className="block overflow-hidden py-[5px]">
+          <span className="block overflow-hidden">
             <motion.span
               className="block"
               initial={{ 

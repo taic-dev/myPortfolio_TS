@@ -1,6 +1,9 @@
+"use client"
+
 import React from "react";
 import { SkillLabelItem } from "../../atoms/SkillLabelItem/SkillLabelItem";
 import type { MicroCMSImage } from "microcms-js-sdk";
+import { motion } from "framer-motion"; 
 
 interface SkillsType {
   id: string;
@@ -14,11 +17,28 @@ interface SkillsType {
   type: string[]
 }
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2
+    }
+  }
+}
+
 export const SkillLabelList = ({ skillLists, skillType }: any ) => {
   const { contents } = skillLists;
   contents.reverse();
   return (
-    <ul className="flex flex-wrap gap-2.5">
+    <motion.ul
+      className="flex flex-wrap gap-2.5"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+    >
       {contents.map((v: SkillsType)=>(
         v.type[0] === skillType && <SkillLabelItem
           key={v.id}
@@ -27,6 +47,6 @@ export const SkillLabelList = ({ skillLists, skillType }: any ) => {
           iconUrl={v.iconUrl.url}
         />
       ))}
-    </ul>
+    </motion.ul>
   );
 };

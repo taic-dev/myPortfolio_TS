@@ -17,7 +17,7 @@ export default async function Home() {
   const skillLists = await getSkills();
   const worksLists = await getWorks();
   return (
-    <main className='pt-[50px]'>
+    <main className='pt-[50px] sm:pt-0'>
       <FvSection />
       <AboutSection>
         <Headline2 name="Profile" />
