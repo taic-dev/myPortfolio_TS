@@ -1,6 +1,9 @@
+"use client"
+
 import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface WorksItemProps {
   link: string;
@@ -10,6 +13,14 @@ interface WorksItemProps {
   client: string;
   year: number;
   wv: string;
+}
+
+const item =  {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  },
 }
 
 export const WorksItem = ({
@@ -22,7 +33,7 @@ export const WorksItem = ({
   wv
 }: WorksItemProps) => {
   return (
-    <li className={`${wv} shrink-0 ${wv === `w-[calc(33.33333%_-_20px)]` && `xl:w-[calc(50%_-_15px)]`} ${wv === `w-[calc(33.33333%_-_20px)]` && `sm:w-[calc(100%)]`}`}>
+    <motion.li className={`${wv} shrink-0 ${wv === `w-[calc(33.33333%_-_20px)]` && `xl:w-[calc(50%_-_15px)]`} ${wv === `w-[calc(33.33333%_-_20px)]` && `sm:w-[calc(100%)]`}`} variants={item}>
       <Link href={`detail/${link}`} className='block h-full'>
         <Image src={imgUrl} alt="実績画像" width={1980} height={1150} className='w-[100%] mb-[20px] rounded-xl shadow-[1px_1px_6px_#ccc;]' />
         <div className='leading-none'>
@@ -31,6 +42,6 @@ export const WorksItem = ({
           <span className='text-xs noto-sans-japanese'>{year} / {client}</span>
         </div>
       </Link>
-    </li>
+    </motion.li>
   )
 }

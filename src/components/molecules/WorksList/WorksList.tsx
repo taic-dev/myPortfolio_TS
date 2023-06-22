@@ -1,4 +1,7 @@
+"use client"
+
 import React from "react";
+import { motion } from "framer-motion";
 import { WorksItem } from "../../atoms/WorksItem/WorksItem";
 import type { MicroCMSImage } from "microcms-js-sdk";
 
@@ -20,11 +23,28 @@ interface WorksType {
   other?: [];
 }
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2
+    }
+  }
+}
+
 export const WorksList = ({ worksLists }: any) => {
   const { contents } = worksLists;
   contents.reverse();
   return (
-    <ul className="flex gap-5 overflow-x-scroll p-3 translate-x-[-0.75rem]">
+    <motion.ul
+      className="flex gap-5 overflow-x-scroll p-3 translate-x-[-0.75rem]"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+    >
       {contents.map((v: WorksType)=>(
         <WorksItem
           key={v.id}
@@ -37,6 +57,6 @@ export const WorksList = ({ worksLists }: any) => {
           wv="w-[314px]"
         />
       ))}
-    </ul>
+    </motion.ul>
   )
 }
