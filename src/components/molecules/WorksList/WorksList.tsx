@@ -43,7 +43,8 @@ export const WorksList = ({ worksLists }: any) => {
       className="flex gap-5 overflow-x-scroll p-3 translate-x-[-0.75rem]"
       variants={container}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true }}
     >
       {contents.map((v: WorksType)=>(
         <WorksItem

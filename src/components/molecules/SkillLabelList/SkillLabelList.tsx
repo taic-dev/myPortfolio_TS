@@ -37,7 +37,8 @@ export const SkillLabelList = ({ skillLists, skillType }: any ) => {
       className="flex flex-wrap gap-2.5"
       variants={container}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true }}
     >
       {contents.map((v: SkillsType)=>(
         v.type[0] === skillType && <SkillLabelItem

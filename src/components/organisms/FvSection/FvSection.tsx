@@ -22,8 +22,7 @@ export const FvSection = () => {
                 y: [100,-5,0],
               }}
               transition={{ 
-                delay: 1,
-                duration: 1 
+                delay: 0.5, duration: 1
               }}
             >
               Hello World !!
@@ -39,7 +38,7 @@ export const FvSection = () => {
                 y: [100,-5,0],
               }}
               transition={{ 
-                delay: 1,
+                delay: 0.5,
                 duration: 1 
               }}
             >
@@ -58,8 +57,8 @@ export const FvSection = () => {
           y: 0,
         }}
         transition={{ 
-          delay: 1,
-          duration: 1.5 
+          delay: 0.5,
+          duration: 1
         }}
       >
         <p className="leading-loose noto-sans-japanese font-bold">Web開発者。HP制作、WEBアプリ開発、業務効率化ツール制作と幅広く手がけています。 中でもフロントエンド開発が大好きで、ユーザーがストレスなく使えるサービスを目指して日々開発に取り組んでいます。<br />
