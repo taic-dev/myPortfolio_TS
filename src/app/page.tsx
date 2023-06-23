@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image'
 import { getSkills, getWorks } from "@/libs/microcms";
 import { FvSection } from '@/components/organisms/FvSection/FvSection';
 import { AboutSection } from '@/components/organisms/AboutSection/AboutSection';
