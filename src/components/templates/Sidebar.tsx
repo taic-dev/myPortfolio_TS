@@ -5,8 +5,6 @@ import { SidebarList } from '../molecules/SidebarList/SidebarList';
 import { SidebarItem } from "../atoms/SidebarItem/SidebarItem";
 
 export const Sidebar = () => {
-  const uri = new URL(window.location.href);
-
   return (
     <div className="fixed max-w-[250px] top-[100px] ml-[15px] lg:hidden">
       <SidebarWrapper>
@@ -17,10 +15,10 @@ export const Sidebar = () => {
          />
         <nav className='mt-[50px] ml-[80px]'>
           <SidebarList>
-            <SidebarItem link={`${uri.origin}#about`} text="About" />
-            <SidebarItem link={`${uri.origin}#skill`} text="Skill" />
-            <SidebarItem link={`${uri.origin}#works`} text="Works" />
-            <SidebarItem link={`${uri.origin}#contact`} text="Contact" />
+            <SidebarItem link="#about" text="About" />
+            <SidebarItem link="#skill" text="Skill" />
+            <SidebarItem link="#works" text="Works" />
+            <SidebarItem link="#contact" text="Contact" />
           </SidebarList>
         </nav>
       </SidebarWrapper>
