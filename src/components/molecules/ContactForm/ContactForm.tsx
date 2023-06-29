@@ -1,5 +1,6 @@
 "use client"
 import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser';
 import { emailValidation, kanaValidation, messageValidation, nameValidation } from '@/util/validation';
 
 export const ContactForm = () => {
@@ -10,6 +11,7 @@ export const ContactForm = () => {
     messageError: "",
   });
 
+  const form = useRef<HTMLFormElement>(null);
   const inputName = useRef<HTMLInputElement>(null);
   const inputKana = useRef<HTMLInputElement>(null);
   const inputEmail = useRef<HTMLInputElement>(null);
@@ -24,21 +26,25 @@ export const ContactForm = () => {
       emailError: emailValidation(inputEmail.current && inputEmail.current.value),
       messageError: messageValidation(inputMessage.current && inputMessage.current.value)
     });
-    
+
     if([
       nameValidation(inputName.current && inputName.current.value),
       kanaValidation(inputKana.current && inputKana.current.value),
       emailValidation(inputEmail.current && inputEmail.current.value),
       messageValidation(inputMessage.current && inputMessage.current.value),
     ].every(v => v === "ok")) {
-
-      // 送信処理
-      alert("送信完了")
+      emailjs.sendForm(process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY )
+        .then((result) => {
+          alert("送信が完了しました。");
+          location.href="/";
+      }, (error) => {
+          console.log(error.text);
+      });
     }
   }
 
   return (
-    <form method='POST' id="form" onSubmit={(e)=>handleSubmit(e)}>
+    <form method='POST' id="form" ref={form} onSubmit={(e)=>handleSubmit(e)}>
       <div className="flex gap-5 mb-[25px]">
         <div className='w-[50%] relative'>
           <input type="text" name="name" ref={inputName} className='w-[100%] p-[5px] rounded border border-solid border-gray-500' placeholder='*名前（フルネーム）' />
