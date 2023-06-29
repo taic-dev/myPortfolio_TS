@@ -1,53 +1,26 @@
 import React from 'react';
-import Image from 'next/image'
 import { getSkills, getWorks } from "@/libs/microcms";
 import { FvSection } from '@/components/organisms/FvSection/FvSection';
 import { AboutSection } from '@/components/organisms/AboutSection/AboutSection';
 import { SkillSection } from '@/components/organisms/SkillSection/SkillSection';
 import { WorksSection } from '@/components/organisms/WorksSection/WorksSection';
 import { ContactSection } from '@/components/organisms/ContactSection/ContactSection';
+import { AboutList } from '@/components/molecules/AboutList/AboutList';
 import { SkillLabelList } from '@/components/molecules/SkillLabelList/SkillLabelList'
 import { WorksList } from '@/components/molecules/WorksList/WorksList';
-import { Headline3 } from '@/components/atoms/Headline3/Headline3';
-import { Headline4 } from '@/components/atoms/Headline4/Headline4';
 import { Headline2 } from '@/components/atoms/Headline2/Headline2';
+import { Headline3 } from '@/components/atoms/Headline3/Headline3';
 import { Button } from '@/components/atoms/Button/Button';
 
 export default async function Home() {
   const skillLists = await getSkills();
   const worksLists = await getWorks();
   return (
-    <main className='pt-[50px]'>
+    <main className='pt-[50px] sm:pt-0'>
       <FvSection />
       <AboutSection>
         <Headline2 name="Profile" />
-        <div className="flex items-center xs:flex-col xs:items-start">
-          <Headline4 name="Name" />
-          <p className='xs:ml-[30px]'>Taishi Ohmoto（大本 泰史）</p>
-        </div>
-        <div className="flex items-center xs:flex-col xs:items-start">
-          <Headline4 name="Date of birth" />
-          <p className='xs:ml-[30px]'>1998.5.30</p>
-        </div>
-        <div className="flex items-center xs:flex-col xs:items-start">
-          <Headline4 name="Birthplace" />
-          <p className='xs:ml-[30px]'>Japan / Hiroshima</p>
-        </div>
-        <div className="flex items-center xs:flex-col xs:items-start">
-          <Headline4 name="Hobby" />
-          <p className='xs:ml-[30px]'>Fashion,Sauna</p>
-        </div>
-        <div className="flex items-center xs:flex-col xs:items-start">
-          <Headline4 name="SNS" />
-          <div className='flex items-center gap-5 xs:ml-[30px]'>
-            <a href="https://github.com/taic-dev">
-              <Image src="/github.svg" width={40} height={40} alt="Githubロゴ" className='h-auto' />
-            </a>
-            <a href="https://zenn.dev/taic_dev">
-              <Image src="/zenn.png" width={100} height={100} alt="Zennロゴ" className='h-auto' />
-            </a>
-          </div>
-        </div>
+        <AboutList />
       </AboutSection>
       <SkillSection>
         <div className='mb-10'>
