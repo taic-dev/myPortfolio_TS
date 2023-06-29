@@ -7,6 +7,7 @@ import { WorksSection } from '@/components/organisms/WorksSection/WorksSection';
 import { ContactSection } from '@/components/organisms/ContactSection/ContactSection';
 import { AboutList } from '@/components/molecules/AboutList/AboutList';
 import { SkillLabelList } from '@/components/molecules/SkillLabelList/SkillLabelList'
+import { ContactForm } from '@/components/molecules/ContactForm/ContactForm';
 import { WorksList } from '@/components/molecules/WorksList/WorksList';
 import { Headline2 } from '@/components/atoms/Headline2/Headline2';
 import { Headline3 } from '@/components/atoms/Headline3/Headline3';
@@ -47,19 +48,7 @@ export default async function Home() {
         <Button name="制作物一覧へ" link="/archive" />
       </WorksSection>
       <ContactSection>
-        <form action="">
-          <div className="flex gap-5 mb-[25px]">
-            <input type="text" className='w-[50%] p-[5px] rounded border border-solid border-gray-500' placeholder='*名前（フルネーム）' />
-            <input type="text" className='w-[50%] p-[5px] rounded border border-solid border-gray-500' placeholder='*名前（カナ）' />
-          </div>
-          <div className='mb-[25px]'>
-            <input type="text" className='w-[100%] p-[5px] rounded border border-solid border-gray-500' placeholder='*メールアドレス' />
-          </div>
-          <div className='mb-[25px]'>
-            <textarea name="" id="" className='w-[100%] p-[5px] rounded border border-solid border-gray-500 min-h-[200px]' placeholder='*お問い合わせ内容'></textarea>
-          </div>
-          <input type="submit" value="送信" className='block w-fit text-white text-sm p-3 px-16 rounded bg-green-600 m-auto' />
-        </form>
+        <ContactForm />
       </ContactSection>
     </main>
   )
