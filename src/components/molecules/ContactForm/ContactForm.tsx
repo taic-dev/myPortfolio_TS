@@ -11,6 +11,10 @@ export const ContactForm = () => {
     messageError: "",
   });
 
+  const EMAIL_JS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID;
+  const EMAIL_JS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID;
+  const EMAIL_JS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY;
+
   const form = useRef<HTMLFormElement>(null);
   const inputName = useRef<HTMLInputElement>(null);
   const inputKana = useRef<HTMLInputElement>(null);
@@ -33,13 +37,15 @@ export const ContactForm = () => {
       emailValidation(inputEmail.current && inputEmail.current.value),
       messageValidation(inputMessage.current && inputMessage.current.value),
     ].every(v => v === "ok")) {
-      emailjs.sendForm(process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY )
-        .then((result) => {
-          alert("送信が完了しました。");
-          location.href="/";
-      }, (error) => {
-          console.log(error.text);
-      });
+      if(EMAIL_JS_SERVICE_ID && EMAIL_JS_TEMPLATE_ID && form.current && EMAIL_JS_PUBLIC_KEY) {
+        emailjs.sendForm( EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID, form.current, EMAIL_JS_PUBLIC_KEY )
+          .then((result) => {
+            alert("送信が完了しました。");
+            location.href="/";
+        }, (error) => {
+            console.log(error.text);
+        });
+      }
     }
   }
 
