@@ -10,7 +10,7 @@ export const Sidebar = () => {
       <SidebarWrapper>
         <SidebarIcon
           link="/"
-          iconUrl='https://myportfoliomaind3f2.gatsbyjs.io/static/me-f026bf3459d66dc11942c02ddf5dd9d8.png'
+          iconUrl='/icon.jpg'
           position='auto'
          />
         <nav className='mt-[50px] ml-[80px]'>
