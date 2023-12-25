@@ -9,7 +9,7 @@ export const FvSection = () => {
     <section className="mx-[15px] mb-[50px]">
       <div className="lg:flex lg:items-center lg:gap-[40px] lg:mb-[50px] sm:flex-col ">
         <div className="hidden lg:block">
-          <SidebarIcon link="/" iconUrl="https://myportfoliomaind3f2.gatsbyjs.io/static/me-f026bf3459d66dc11942c02ddf5dd9d8.png" position="" />
+          <SidebarIcon link="/" iconUrl="/icon.jpg" position="" />
         </div>
         <h1 className="mb-[80px] text-[59px] font-bold leading-none lg:mb-0 md:text-topTitle sm:text-center translate-y-[-5px]">
           <span className="block overflow-hidden pt-[5px]">
